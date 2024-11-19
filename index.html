@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .box {
+      width: fit-content;
+      margin: auto;
+      /* height: 100px; */
+      background-color: antiquewhite;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 30px;
+    }
+    .box * {
+      width: 100px;
+      margin: 10px;
+      border-radius: 4px;
+      background-color: #ffffff;
+    }
+    .color {
+      width: 400px;
+      height: 400px;
+
+      /* background-color: red; */
+      border-radius: 20px;
+      margin: 10px auto;
+      
+    }
+  </style>
+  <body>
+    <div class="box">
+      <input type="color" name="" id="color" value="#ffffff"  />
+      <button onclick="choseColor()">chose</button>
+      <input type="text" name="" id="nameColor" value="#ffffff">
+      <div class="color" id="boxColor"></div>
+    </div>
+    <script>
+      const valColor = document.getElementById("color");
+      const boxColor = document.getElementById("boxColor");
+      const nameColor = document.getElementById("nameColor");
+
+      function choseColor() {
+        nameColor.value = valColor.value
+        boxColor.style.background = valColor.value;
+      }
+    </script>
+  </body>
+</html>
